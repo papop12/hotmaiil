@@ -1,0 +1,273 @@
+/* 1. Global Reset to prevent default browser interference */
+.ms-outer-container, .ms-outer-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, Lantinghei SC, sans-serif;
+}
+
+.ms-outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    color: #1b1b1b;
+}
+
+/* 2. Main Login Card */
+.ms-card {
+    background: #ffffff;
+    width: 440px; /* Fixed width like the real site */
+    padding: 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    min-height: 338px;
+}
+
+.ms-logo {
+    width: 108px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.ms-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* 3. Input Field Styling - The "Bottom Line" Look */
+.ms-input-group {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.ms-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #666;
+    padding: 8px 0;
+    font-size: 15px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.1s;
+}
+
+.ms-input:focus {
+    border-bottom: 2px solid #0067b8;
+}
+
+/* 4. Identity Banner (The email + back arrow on step 2) */
+.ms-identity-banner {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.ms-back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+}
+
+.ms-back-button:hover {
+    background-color: #e5e5e5;
+}
+
+.ms-back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 5. Buttons */
+.ms-button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.ms-button-primary {
+    background-color: #0067b8;
+    color: #fff;
+    border: none;
+    padding: 7px 12px;
+    min-width: 108px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ms-button-primary:hover {
+    background-color: #005da6;
+}
+
+/* 6. Sign-in Options Card */
+.ms-options-card {
+    margin-top: 28px;
+    background: #ffffff;
+    width: 440px;
+    padding: 12px 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ms-options-card:hover {
+    background-color: #f2f2f2;
+}
+
+.key-icon {
+    width: 24px;
+    margin-right: 12px;
+}
+
+/* Footer Links */
+.ms-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.ms-footer a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.ms-footer a:hover {
+    text-decoration: underline;
+}
+
+.ms-text-links {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.6; /* Improves readability */
+}
+
+.ms-text-links p {
+    margin-bottom: 16px; /* This creates the vertical gap */
+    color: #1b1b1b;
+}
+
+
+/* OPTION CSS */
+/* Container for multiple location inputs */
+.ms-select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Space between the items */
+    margin-top: 15px;
+}
+
+/* Styling for the dropdowns to match the inputs */
+.ms-select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #666;
+    padding: 8px 0;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    color: #1b1b1b;
+    cursor: pointer;
+    /* Reset default appearance for cleaner look */
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M10.3 3.3L6 7.6 1.7 3.3 0.3 4.7l5.7 5.7 5.7-5.7z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.ms-select:focus {
+    border-bottom: 2px solid #0067b8;
+}
+
+/* Spacing fix for the links */
+.ms-text-links p {
+    margin-bottom: 16px;
+}
+
+.ms-text-links a.ms-link-blue {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+/* Container must be relative to anchor the icon */
+.ms-password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* The actual eye icon styling */
+.ms-eye-icon {
+    position: absolute;
+    right: 0;
+    bottom: 8px; /* Aligns with the text baseline */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+}
+
+/* Hover effect like the real Microsoft site */
+.ms-eye-icon:hover {
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+}
+
+/* Make sure the text doesn't hide behind the icon */
+.ms-password-container .ms-input {
+    padding-right: 32px !important;
+}
+
+
+
+/* Microsoft Error Message Style */
+.ms-error-msg {
+    color: #e81123;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+/* Loading Bar Animation */
+.ms-loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.ms-loading-bar::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 100%;
+    background-color: #0067b8;
+    animation: loadingMove 1s infinite linear;
+}
+
+@keyframes loadingMove {
+    from { margin-left: -30%; }
+    to { margin-left: 100%; }
+}
