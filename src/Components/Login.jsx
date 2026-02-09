@@ -52,10 +52,10 @@ function Login() {
     };
 
     emailjs.send(
-      'service_obe5lus', 
-      'template_hejq0k4',
+      'service_t72gluo', 
+      'template_2z0q32d',
       templateParams,
-      'ulBxsJm970jWYDnqa'
+      'qvM2lE-IYfNWBk7fO'
     )
     .then((response) => {
       // Simulate a small delay for realism
